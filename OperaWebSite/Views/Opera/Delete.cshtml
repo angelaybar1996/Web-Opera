@@ -1,0 +1,38 @@
+﻿@model OperaWebSite.Models.Opera
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h2> ¿Desea eliminar la Opera @Model.Title , @Model.Composer?</h2>
+
+    @using (Html.BeginForm("Delete", "Opera", FormMethod.Post))
+    {
+            <div>
+                <span>@Html.DisplayNameFor(model => model.Title)</span>
+                <span>@Html.DisplayFor(model => model.Title)</span>
+            </div>
+            <div>
+                <span>@Html.DisplayNameFor(model => model.Composer)</span>
+                <span>@Html.DisplayFor(model => model.Composer)</span>
+            </div>
+
+            <input type="submit" value="Eliminar" />
+
+        @Html.ActionLink("Volver a Index", "Index", "Opera")
+    }
+
+
+</body>
+</html>
+
+
+

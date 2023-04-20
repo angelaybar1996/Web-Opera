@@ -1,0 +1,44 @@
+﻿@model OperaWebSite.Models.Empleado
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalle</title>
+</head>
+<body>
+    <h2> Detalle del empleado</h2>
+    <p>@Html.ActionLink("Volver a Index", "Index", "Empleado")</p>
+
+    <p>
+        @Html.DisplayNameFor(model => model.Nombre)
+        @Html.DisplayFor(model => model.Nombre)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model => model.Apellido)
+        @Html.DisplayFor(model => model.Apellido)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model => model.Dni)
+        @Html.DisplayFor(model => model.Dni)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model => model.Legajo)
+        @Html.DisplayFor(model => model.Legajo)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model => model.FechaNacimiento)
+        @Html.DisplayFor(model => model.FechaNacimiento)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model => model.Titulo)
+        @Html.DisplayFor(model => model.Titulo)
+    </p>
+
+</body>
+</html>
+

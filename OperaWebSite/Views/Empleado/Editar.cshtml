@@ -1,0 +1,62 @@
+﻿@model OperaWebSite.Models.Empleado
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Editar</title>
+</head>
+<body>
+    <h1>Modificar empleado</h1>
+
+    @using (Html.BeginForm("Edit", "Empleado", FormMethod.Post))
+    {
+        <p>
+            @Html.LabelFor(model => model.Nombre)
+            @Html.TextBoxFor(model => model.Nombre)
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Apellido)
+            @Html.TextBoxFor(model => model.Apellido)
+            @Html.ValidationMessageFor(model => model.Apellido)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Dni)
+            @Html.TextBoxFor(model => model.Dni)
+            @Html.ValidationMessageFor(model => model.Dni)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Legajo)
+            @Html.TextBoxFor(model => model.Legajo)
+            @Html.ValidationMessageFor(model => model.Legajo)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Nombre)
+            @Html.TextBoxFor(model => model.Nombre)
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.FechaNacimiento)
+            @Html.TextBoxFor(model => model.FechaNacimiento)
+            @Html.ValidationMessageFor(model => model.FechaNacimiento)
+        </p>
+        <p>
+            @Html.LabelFor(model => model.Titulo)
+            @Html.TextBoxFor(model => model.Titulo)
+            @Html.ValidationMessageFor(model => model.Titulo)
+        </p>
+
+        <input type="submit" action="Guardar" />
+
+        @Html.ActionLink("Volver a Index", "Index", "Empleado")
+    }
+
+</body>
+</html>
+

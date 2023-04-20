@@ -1,0 +1,36 @@
+﻿@model OperaWebSite.Models.Opera
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalle</title>
+</head>
+<body>
+    <h2> Detalle de la Opera</h2>
+    <p>@Html.ActionLink("Volver a Index", "Index", "Opera")</p>
+
+    <p>
+        @Html.DisplayNameFor(model => model.Title)
+        @Html.DisplayFor(model => model.Title)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model => model.Composer)
+        @Html.DisplayFor(model => model.Composer)
+    </p>
+    <p>
+        @Html.DisplayNameFor(model => model.Year)
+        @Html.DisplayFor(model => model.Year)
+    </p>
+   
+</body>
+</html>
+
+
+

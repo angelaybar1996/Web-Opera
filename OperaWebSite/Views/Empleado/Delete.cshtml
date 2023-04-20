@@ -1,0 +1,36 @@
+﻿@model OperaWebSite.Models.Empleado
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h2> ¿Desea eliminar el empleado @Model.Nombre @Model.Apellido?</h2>
+
+    @using (Html.BeginForm("Delete", "Empleado", FormMethod.Post))
+    {
+        <div>
+            <span>@Html.DisplayNameFor(model => model.Dni)</span>
+            <span>@Html.DisplayFor(model => model.Dni)</span>
+        </div>
+        <div>
+            <span>@Html.DisplayNameFor(model => model.Legajo)</span>
+            <span>@Html.DisplayFor(model => model.Legajo)</span>
+        </div>
+
+        <input type="submit" value="Eliminar" />
+
+        @Html.ActionLink("Volver a Index", "Index", "Empleado")
+    }
+
+
+</body>
+</html>
+
